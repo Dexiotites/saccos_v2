@@ -2,6 +2,11 @@
 
 namespace App\Http\Livewire\Loans;
 
+<<<<<<< HEAD
+=======
+use App\Models\approvals;
+use App\Models\TeamUser;
+>>>>>>> project2/master
 use Livewire\Component;
 
 
@@ -28,15 +33,21 @@ class MemberInfo extends Component
 
     public function back()
     {
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> project2/master
         Session::put('memberToViewId', false);
         $this->emit('refreshMembersListComponent');
     }
 
     public function set()
     {
+<<<<<<< HEAD
 
+=======
+>>>>>>> project2/master
         $institution_id = '';
         $id = auth()->user()->id;
         $currentUser = DB::table('team_user')->where('user_id', $id)->get();

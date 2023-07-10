@@ -149,6 +149,11 @@ class NewOrder extends Component
         } else {
 
 
+<<<<<<< HEAD
+=======
+            dd(__LINE__);
+
+>>>>>>> project2/master
             //$this->validate();
             if ($this->selectedBank == '') {
                 $this->selectedBank = '59';

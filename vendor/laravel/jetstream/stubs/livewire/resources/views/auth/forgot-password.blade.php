@@ -21,7 +21,11 @@
 
             <div class="block">
                 <x-jet-label for="email" value="{{ __('Email') }}" />
+<<<<<<< HEAD
                 <x-jet-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" />
+=======
+                <input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" />
+>>>>>>> project2/master
             </div>
 
             <div class="flex items-center justify-end mt-4">

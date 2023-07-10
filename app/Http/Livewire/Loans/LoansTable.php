@@ -87,9 +87,14 @@ class LoansTable extends LivewireDatatable
     public function columns(): array
     {
 
+//        Session::put('currentloanMember',null);
+//        Session::put('currentloanMember',null);
+//        Session::put('currentloanID',null);
 
         $html =null;
+
         return [
+
 
             Column::callback(['member_number'], function ($member_number) {
 
@@ -121,6 +126,7 @@ class LoansTable extends LivewireDatatable
                 //$status = 1;
                 $member_number = LoansModel::where('id',$id)->value('member_number');
                 $status = LoansModel::where('id',$id)->value('status');
+
                 if($status == 'Pending'){
                     $status = 1;
                 }elseif ($status == 'Awaiting Approval'){
@@ -162,7 +168,7 @@ class LoansTable extends LivewireDatatable
                             </div> ';
 
                 return $html;
-            }),
+            })->label('view'),
 
         ];
 
@@ -172,8 +178,6 @@ class LoansTable extends LivewireDatatable
 
 
     public function viewloan($id,$member_number,$status){
-
-
 
         if($status == 1){
             Session::put('loanStatus','Pending');
@@ -201,16 +205,20 @@ class LoansTable extends LivewireDatatable
             Session::put('loanStatus','Pending');
         }
 
-
         if ($status == 1){
             Session::put('disableInputs',false);
         }else{
             Session::put('disableInputs',true);
         }
 
+        Session::forget('currentloanMember');
+        Session::forget('currentloanID');
+
+
         Session::put('currentloanMember',$member_number);
         Session::put('currentloanID',$id);
         $this->emit('currentloanID');
+        $this->emit('viewMemberDetails');
     }
 
 

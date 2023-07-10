@@ -2,6 +2,7 @@
 
 namespace App\Http\Livewire\Loans;
 
+use App\Models\User;
 use Livewire\Component;
 use Illuminate\Support\Facades\Session;
 
@@ -452,7 +453,7 @@ class Loans extends Component
             $this->password = null;
         }
 
-    public function delete(): void
+    public function delete():void
     {
         $user = User::where('id',$this->userSelected)->first();
         $action = '';

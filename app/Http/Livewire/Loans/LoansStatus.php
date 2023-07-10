@@ -22,6 +22,7 @@ class LoansStatus extends Component
     public function showTab($tab)
     {
         $this->activeTab = $tab;
+
     }
 
 

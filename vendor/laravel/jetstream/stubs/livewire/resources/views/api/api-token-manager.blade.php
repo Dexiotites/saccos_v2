@@ -13,7 +13,11 @@
             <!-- Token Name -->
             <div class="col-span-6 sm:col-span-4">
                 <x-jet-label for="name" value="{{ __('Token Name') }}" />
+<<<<<<< HEAD
                 <x-jet-input id="name" type="text" class="mt-1 block w-full" wire:model.defer="createApiTokenForm.name" autofocus />
+=======
+                <input id="name" type="text" class="mt-1 block w-full" wire:model.defer="createApiTokenForm.name" autofocus />
+>>>>>>> project2/master
                 <x-jet-input-error for="name" class="mt-2" />
             </div>
 
@@ -104,7 +108,11 @@
                 {{ __('Please copy your new API token. For your security, it won\'t be shown again.') }}
             </div>
 
+<<<<<<< HEAD
             <x-jet-input x-ref="plaintextToken" type="text" readonly :value="$plainTextToken"
+=======
+            <input x-ref="plaintextToken" type="text" readonly :value="$plainTextToken"
+>>>>>>> project2/master
                 class="mt-4 bg-gray-100 px-4 py-2 rounded font-mono text-sm text-gray-500 w-full break-all"
                 autofocus autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"
                 @showing-token-modal.window="setTimeout(() => $refs.plaintextToken.select(), 250)"

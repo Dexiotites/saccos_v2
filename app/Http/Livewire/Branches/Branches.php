@@ -2,6 +2,7 @@
 
 namespace App\Http\Livewire\Branches;
 
+use App\Models\User;
 use Livewire\Component;
 use App\Models\BranchesModel;
 use App\Models\approvals;
@@ -32,6 +33,7 @@ class Branches extends Component
     public $pendingbranchname;
     public $branch;
     public $showAddBranch;
+    public $phone_number;
 
 
     public $email;
@@ -63,7 +65,7 @@ class Branches extends Component
     }
 
     public function updatedBranch(){
-        $branchData = BranchesModel::select('membershipNumber', 'name', 'region', 'wilaya', 'email')
+        $branchData = BranchesModel::select('membershipNumber', 'name', 'region', 'wilaya', 'email','phone_number')
         ->where('id', '=', $this->branch)
         ->get();
     foreach ($branchData as $branch){
@@ -72,6 +74,7 @@ class Branches extends Component
         $this->region=$branch->region;
         $this->wilaya=$branch->wilaya;
         $this->email=$branch->email;
+        $this->phone_number=$branch->phone_number;
         $this->branch_status=$branch->branch_status;
     }
     }
@@ -88,8 +91,10 @@ class Branches extends Component
             'name' =>$this->name,
             'region' =>$this->region,
             'wilaya' =>$this->wilaya,
-            'email' =>$this->email
+            'email' =>$this->email,
+            'phone_number'=>$this->phone_number,
         ];
+
 
         $update_value = approvals::updateOrCreate(
             [
@@ -105,7 +110,7 @@ class Branches extends Component
                 'process_code' => '02',
                 'process_id' => $this->branch,
                 'process_status' => 'Pending',
-                'user_id'  => Auth::user()->id,
+                'user_id'  => auth()->user()->id,
                 'team_id'  => $this->branch,
                 'edit_package'=> json_encode($data)
             ]
@@ -128,6 +133,7 @@ class Branches extends Component
         $branch->region = $this->region;
         $branch->wilaya = $this->wilaya;
         $branch->email = $this->email;
+       $branch->phone_number = $this->phone_number;
         $branch->save();
         $insertedId = $branch->id;
 
@@ -261,6 +267,7 @@ class Branches extends Component
             $this->showEditBranch = false;
         }
 
+
         public function confirmPassword(): void
         {
             // Check if password matches for logged-in user
@@ -277,6 +284,7 @@ class Branches extends Component
 
         }
 
+
         public function resetPassword(): void
         {
             $this->password = null;
@@ -284,10 +292,9 @@ class Branches extends Component
 
     public function delete(): void
     {
-        $user = User::where('id',$this->userSelected)->first();
+        $user = BranchesModel::where('id',$this->branchSelected)->first();
         $action = '';
-        if ($user) {
-
+        if ($user->id) {
             if($this->permission == 'BLOCKED'){
                 $action = 'blockUser';
             }
@@ -297,20 +304,19 @@ class Branches extends Component
             if($this->permission == 'DELETED'){
                 $action = 'deleteUser';
             }
-
             $update_value = approvals::updateOrCreate(
                 [
-                    'process_id' => $this->userSelected,
-                    'user_id' => Auth::user()->id
+                    'process_id' => $this->branchSelected,
+                    'user_id' => auth()->user()->id,
 
                 ],
-                [
-                    'institution' => '',
+            [
+                    'institution' => ' ',
                     'process_name' => $action,
                     'process_description' => $this->permission.' user - '.$user->name,
                     'approval_process_description' => '',
                     'process_code' => '29',
-                    'process_id' => $this->userSelected,
+                    'process_id' => $this->branchSelected,
                     'process_status' => $this->permission,
                     'approval_status' => 'PENDING',
                     'user_id'  => Auth::user()->id,

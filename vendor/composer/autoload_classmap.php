@@ -206,6 +206,10 @@ return array(
     'App\\Imports\\ImportTransactions' => $baseDir . '/app/Imports/ImportTransactions.php',
     'App\\Imports\\ImportUser' => $baseDir . '/app/Imports/ImportUser.php',
     'App\\Mail\\sendMail' => $baseDir . '/app/Mail/sendMail.php',
+<<<<<<< HEAD
+=======
+    'App\\Models\\Absence' => $baseDir . '/app/Models/Absence.php',
+>>>>>>> project2/master
     'App\\Models\\Accounting' => $baseDir . '/app/Models/Accounting.php',
     'App\\Models\\AccountsModel' => $baseDir . '/app/Models/AccountsModel.php',
     'App\\Models\\AccountsRunningBalances' => $baseDir . '/app/Models/AccountsRunningBalances.php',
@@ -238,7 +242,10 @@ return array(
     'App\\Models\\EmployeeDepartment' => $baseDir . '/app/Models/EmployeeDepartment.php',
     'App\\Models\\EmployeeSalary' => $baseDir . '/app/Models/EmployeeSalary.php',
     'App\\Models\\Expenses' => $baseDir . '/app/Models/Expenses.php',
+<<<<<<< HEAD
     'App\\Models\\Grant' => $baseDir . '/app/Models/Grant.php',
+=======
+>>>>>>> project2/master
     'App\\Models\\InstitutionsList' => $baseDir . '/app/Models/InstitutionsList.php',
     'App\\Models\\Loan_sub_products' => $baseDir . '/app/Models/Loan_sub_products.php',
     'App\\Models\\LoansModel' => $baseDir . '/app/Models/LoansModel.php',
@@ -6982,6 +6989,26 @@ return array(
     'Termwind\\ValueObjects\\Node' => $vendorDir . '/nunomaduro/termwind/src/ValueObjects/Node.php',
     'Termwind\\ValueObjects\\Style' => $vendorDir . '/nunomaduro/termwind/src/ValueObjects/Style.php',
     'Termwind\\ValueObjects\\Styles' => $vendorDir . '/nunomaduro/termwind/src/ValueObjects/Styles.php',
+<<<<<<< HEAD
+=======
+    'Tests\\CreatesApplication' => $baseDir . '/tests/CreatesApplication.php',
+    'Tests\\Feature\\ApiTokenPermissionsTest' => $baseDir . '/tests/Feature/ApiTokenPermissionsTest.php',
+    'Tests\\Feature\\AuthenticationTest' => $baseDir . '/tests/Feature/AuthenticationTest.php',
+    'Tests\\Feature\\BrowserSessionsTest' => $baseDir . '/tests/Feature/BrowserSessionsTest.php',
+    'Tests\\Feature\\CreateApiTokenTest' => $baseDir . '/tests/Feature/CreateApiTokenTest.php',
+    'Tests\\Feature\\DeleteAccountTest' => $baseDir . '/tests/Feature/DeleteAccountTest.php',
+    'Tests\\Feature\\DeleteApiTokenTest' => $baseDir . '/tests/Feature/DeleteApiTokenTest.php',
+    'Tests\\Feature\\EmailVerificationTest' => $baseDir . '/tests/Feature/EmailVerificationTest.php',
+    'Tests\\Feature\\ExampleTest' => $baseDir . '/tests/Feature/ExampleTest.php',
+    'Tests\\Feature\\PasswordConfirmationTest' => $baseDir . '/tests/Feature/PasswordConfirmationTest.php',
+    'Tests\\Feature\\PasswordResetTest' => $baseDir . '/tests/Feature/PasswordResetTest.php',
+    'Tests\\Feature\\ProfileInformationTest' => $baseDir . '/tests/Feature/ProfileInformationTest.php',
+    'Tests\\Feature\\RegistrationTest' => $baseDir . '/tests/Feature/RegistrationTest.php',
+    'Tests\\Feature\\TwoFactorAuthenticationSettingsTest' => $baseDir . '/tests/Feature/TwoFactorAuthenticationSettingsTest.php',
+    'Tests\\Feature\\UpdatePasswordTest' => $baseDir . '/tests/Feature/UpdatePasswordTest.php',
+    'Tests\\TestCase' => $baseDir . '/tests/TestCase.php',
+    'Tests\\Unit\\ExampleTest' => $baseDir . '/tests/Unit/ExampleTest.php',
+>>>>>>> project2/master
     'TheSeer\\Tokenizer\\Exception' => $vendorDir . '/theseer/tokenizer/src/Exception.php',
     'TheSeer\\Tokenizer\\NamespaceUri' => $vendorDir . '/theseer/tokenizer/src/NamespaceUri.php',
     'TheSeer\\Tokenizer\\NamespaceUriException' => $vendorDir . '/theseer/tokenizer/src/NamespaceUriException.php',

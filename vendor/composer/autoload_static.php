@@ -4,7 +4,11 @@
 
 namespace Composer\Autoload;
 
+<<<<<<< HEAD
 class ComposerStaticInitad0a71988a56262aa15eefe09ae2f096
+=======
+class ComposerStaticInitbb5b79167e6b9134a97e7dfe9f1f1500
+>>>>>>> project2/master
 {
     public static $files = array (
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
@@ -887,6 +891,10 @@ class ComposerStaticInitad0a71988a56262aa15eefe09ae2f096
         'App\\Imports\\ImportTransactions' => __DIR__ . '/../..' . '/app/Imports/ImportTransactions.php',
         'App\\Imports\\ImportUser' => __DIR__ . '/../..' . '/app/Imports/ImportUser.php',
         'App\\Mail\\sendMail' => __DIR__ . '/../..' . '/app/Mail/sendMail.php',
+<<<<<<< HEAD
+=======
+        'App\\Models\\Absence' => __DIR__ . '/../..' . '/app/Models/Absence.php',
+>>>>>>> project2/master
         'App\\Models\\Accounting' => __DIR__ . '/../..' . '/app/Models/Accounting.php',
         'App\\Models\\AccountsModel' => __DIR__ . '/../..' . '/app/Models/AccountsModel.php',
         'App\\Models\\AccountsRunningBalances' => __DIR__ . '/../..' . '/app/Models/AccountsRunningBalances.php',
@@ -919,7 +927,10 @@ class ComposerStaticInitad0a71988a56262aa15eefe09ae2f096
         'App\\Models\\EmployeeDepartment' => __DIR__ . '/../..' . '/app/Models/EmployeeDepartment.php',
         'App\\Models\\EmployeeSalary' => __DIR__ . '/../..' . '/app/Models/EmployeeSalary.php',
         'App\\Models\\Expenses' => __DIR__ . '/../..' . '/app/Models/Expenses.php',
+<<<<<<< HEAD
         'App\\Models\\Grant' => __DIR__ . '/../..' . '/app/Models/Grant.php',
+=======
+>>>>>>> project2/master
         'App\\Models\\InstitutionsList' => __DIR__ . '/../..' . '/app/Models/InstitutionsList.php',
         'App\\Models\\Loan_sub_products' => __DIR__ . '/../..' . '/app/Models/Loan_sub_products.php',
         'App\\Models\\LoansModel' => __DIR__ . '/../..' . '/app/Models/LoansModel.php',
@@ -7663,6 +7674,26 @@ class ComposerStaticInitad0a71988a56262aa15eefe09ae2f096
         'Termwind\\ValueObjects\\Node' => __DIR__ . '/..' . '/nunomaduro/termwind/src/ValueObjects/Node.php',
         'Termwind\\ValueObjects\\Style' => __DIR__ . '/..' . '/nunomaduro/termwind/src/ValueObjects/Style.php',
         'Termwind\\ValueObjects\\Styles' => __DIR__ . '/..' . '/nunomaduro/termwind/src/ValueObjects/Styles.php',
+<<<<<<< HEAD
+=======
+        'Tests\\CreatesApplication' => __DIR__ . '/../..' . '/tests/CreatesApplication.php',
+        'Tests\\Feature\\ApiTokenPermissionsTest' => __DIR__ . '/../..' . '/tests/Feature/ApiTokenPermissionsTest.php',
+        'Tests\\Feature\\AuthenticationTest' => __DIR__ . '/../..' . '/tests/Feature/AuthenticationTest.php',
+        'Tests\\Feature\\BrowserSessionsTest' => __DIR__ . '/../..' . '/tests/Feature/BrowserSessionsTest.php',
+        'Tests\\Feature\\CreateApiTokenTest' => __DIR__ . '/../..' . '/tests/Feature/CreateApiTokenTest.php',
+        'Tests\\Feature\\DeleteAccountTest' => __DIR__ . '/../..' . '/tests/Feature/DeleteAccountTest.php',
+        'Tests\\Feature\\DeleteApiTokenTest' => __DIR__ . '/../..' . '/tests/Feature/DeleteApiTokenTest.php',
+        'Tests\\Feature\\EmailVerificationTest' => __DIR__ . '/../..' . '/tests/Feature/EmailVerificationTest.php',
+        'Tests\\Feature\\ExampleTest' => __DIR__ . '/../..' . '/tests/Feature/ExampleTest.php',
+        'Tests\\Feature\\PasswordConfirmationTest' => __DIR__ . '/../..' . '/tests/Feature/PasswordConfirmationTest.php',
+        'Tests\\Feature\\PasswordResetTest' => __DIR__ . '/../..' . '/tests/Feature/PasswordResetTest.php',
+        'Tests\\Feature\\ProfileInformationTest' => __DIR__ . '/../..' . '/tests/Feature/ProfileInformationTest.php',
+        'Tests\\Feature\\RegistrationTest' => __DIR__ . '/../..' . '/tests/Feature/RegistrationTest.php',
+        'Tests\\Feature\\TwoFactorAuthenticationSettingsTest' => __DIR__ . '/../..' . '/tests/Feature/TwoFactorAuthenticationSettingsTest.php',
+        'Tests\\Feature\\UpdatePasswordTest' => __DIR__ . '/../..' . '/tests/Feature/UpdatePasswordTest.php',
+        'Tests\\TestCase' => __DIR__ . '/../..' . '/tests/TestCase.php',
+        'Tests\\Unit\\ExampleTest' => __DIR__ . '/../..' . '/tests/Unit/ExampleTest.php',
+>>>>>>> project2/master
         'TheSeer\\Tokenizer\\Exception' => __DIR__ . '/..' . '/theseer/tokenizer/src/Exception.php',
         'TheSeer\\Tokenizer\\NamespaceUri' => __DIR__ . '/..' . '/theseer/tokenizer/src/NamespaceUri.php',
         'TheSeer\\Tokenizer\\NamespaceUriException' => __DIR__ . '/..' . '/theseer/tokenizer/src/NamespaceUriException.php',
@@ -7777,10 +7808,17 @@ class ComposerStaticInitad0a71988a56262aa15eefe09ae2f096
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
+<<<<<<< HEAD
             $loader->prefixLengthsPsr4 = ComposerStaticInitad0a71988a56262aa15eefe09ae2f096::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInitad0a71988a56262aa15eefe09ae2f096::$prefixDirsPsr4;
             $loader->prefixesPsr0 = ComposerStaticInitad0a71988a56262aa15eefe09ae2f096::$prefixesPsr0;
             $loader->classMap = ComposerStaticInitad0a71988a56262aa15eefe09ae2f096::$classMap;
+=======
+            $loader->prefixLengthsPsr4 = ComposerStaticInitbb5b79167e6b9134a97e7dfe9f1f1500::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInitbb5b79167e6b9134a97e7dfe9f1f1500::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInitbb5b79167e6b9134a97e7dfe9f1f1500::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInitbb5b79167e6b9134a97e7dfe9f1f1500::$classMap;
+>>>>>>> project2/master
 
         }, null, ClassLoader::class);
     }

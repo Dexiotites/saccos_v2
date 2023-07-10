@@ -15,7 +15,11 @@
 
             <div>
                 <x-jet-label for="password" value="{{ __('Password') }}" />
+<<<<<<< HEAD
                 <x-jet-input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="current-password" autofocus />
+=======
+                <input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="current-password" autofocus />
+>>>>>>> project2/master
             </div>
 
             <div class="flex justify-end mt-4">

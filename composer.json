@@ -6,9 +6,13 @@
     "license": "MIT",
     "require": {
         "php": "^8.0.2",
+<<<<<<< HEAD
         "ext-curl": "*",
         "ext-dom": "*",
         "ext-gd": "*",
+=======
+        "ext-dom": "*",
+>>>>>>> project2/master
         "ext-libxml": "*",
         "ext-simplexml": "*",
         "giggsey/libphonenumber-for-php": "^8.13",
@@ -28,7 +32,12 @@
         "phpsysinfo/phpsysinfo": "^3.4",
         "psr/simple-cache": "1.0",
         "rappasoft/laravel-livewire-tables": "^2.0",
+<<<<<<< HEAD
         "te7a-houdini/laravel-trix": "^2.0"
+=======
+        "te7a-houdini/laravel-trix": "^2.0",
+      "ext-curl": "*"
+>>>>>>> project2/master
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",

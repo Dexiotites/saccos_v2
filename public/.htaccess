@@ -1,0 +1,50 @@
+# Enable mod_rewrite and mod_headers modules
+<IfModule mod_rewrite.c>
+    <IfModule mod_headers.c>
+
+        # Set the Content-Security-Policy header to allow resources only from the same domain, and inline scripts and styles
+        Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'"
+
+        # Set the X-Frame-Options header to prevent clickjacking attacks by only allowing the page to be displayed in a frame on the same origin
+        Header always set X-Frame-Options "SAMEORIGIN"
+
+        # Set the X-Content-Type-Options header to prevent MIME type sniffing
+        Header always set X-Content-Type-Options "nosniff"
+
+        # Set the Referrer-Policy header to restrict the amount of information sent in the Referer header
+        Header always set Referrer-Policy "strict-origin-when-cross-origin"
+
+        # Set the Permissions-Policy header to restrict the use of certain features in the browser
+        Header always set Permissions-Policy "accelerometer=(); camera=(); geolocation=(); gyroscope=(); magnetometer=(); microphone=(); payment=(); usb=()"
+
+        # Set the Strict-Transport-Security header to enforce HTTPS for the specified duration, and include subdomains and preload
+        Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+
+        # Set the Feature-Policy header to disable camera, geolocation, and microphone
+        Header always set Feature-Policy "camera 'none'; geolocation 'none'; microphone 'none'"
+
+    </IfModule>
+
+    # Disable directory indexing and file negotiation
+    <IfModule mod_negotiation.c>
+        Options -MultiViews -Indexes
+    </IfModule>
+
+
+
+    # Handle Authorization Header
+    RewriteCond %{HTTP:Authorization} .
+    RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+
+    # Redirect trailing slashes to remove them
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_URI} (.+)/$
+    RewriteRule ^ %1 [L,R=301]
+
+    # Send requests to the front controller
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^ index.php [L]
+
+</IfModule>
+
